@@ -9,7 +9,7 @@ data class BaseApiRes<T>(
     @SerialName("data")
     val `data`: T,
     @SerialName("echo")
-    val echo: String,
+    val echo: String?,
     @SerialName("retcode")
     val retcode: Int,
     @SerialName("status")
