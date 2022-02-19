@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class GuildMessage(
     @SerialName("guild_id")
-    override val guildId: Long,
+    override val guildId: String,
     @SerialName("channel_id")
     override val channelId: Long,
     @SerialName("user_id")

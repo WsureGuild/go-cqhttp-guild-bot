@@ -2,6 +2,8 @@ package top.wsure.guild.unofficial.dtos.api
 import kotlinx.serialization.Serializable
 
 import kotlinx.serialization.SerialName
+import top.wsure.guild.unofficial.dtos.GoCQHttpTimeSerializer
+import java.time.LocalDateTime
 
 
 @Serializable
@@ -13,7 +15,8 @@ data class ChannelItem(
     @SerialName("channel_type")
     val channelType: Int,
     @SerialName("create_time")
-    val createTime: Int? = null,
+    @Serializable(with = GoCQHttpTimeSerializer::class )
+    val createTime: LocalDateTime? = null,
     @SerialName("creator_id")
     val creatorId: Int? = null,
     @SerialName("creator_tiny_id")

@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SendGuildChannelMsg(
-    @SerialName("guild_id") val guildId:Long,
+    @SerialName("guild_id") val guildId:String,
     @SerialName("channel_id") val channelId:Long,
     val message:String
 ){

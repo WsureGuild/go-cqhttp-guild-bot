@@ -11,7 +11,7 @@ data class ChannelUpdatedNotice(
     @SerialName("channel_id")
     override val channelId: Long,
     @SerialName("guild_id")
-    override val guildId: Long,
+    override val guildId: String,
     @SerialName("user_id")
     override val userId: Long,
 
@@ -48,7 +48,7 @@ data class ChannelInfo(
     @SerialName("current_slow_mode")
     val currentSlowMode: Long,
     @SerialName("owner_guild_id")
-    val ownerGuildId: Long,
+    val ownerGuildId: String,
     @SerialName("slow_modes")
     val slowModeInfos: List<SlowModeInfo>,
     @SerialName("talk_permission")
